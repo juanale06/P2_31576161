@@ -143,6 +143,79 @@ async index(req: Request, res: Response): Promise<void> {
 }
 
 
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async pedir(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('pedir');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+async info(req: Request, res: Response): Promise<void> {
+  try {
+    res.render('info');
+  } catch (error: any) {
+    console.error(error.message);
+    res.status(500).send('Error en el servidor');
+  }
+}
+
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async inicio_sesion(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('inicio_sesion');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async instrumentos(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('instrumentos');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async registro(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('registro');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+
+
+
 
 }
 
