@@ -74,7 +74,7 @@ class ContactsController {
 • Dirección IP: ${ip}
 • Fecha y hora: ${new Date().toLocaleString()}
    -----------------------------`;
-   const recipients = ['soapdelinger@gmail.com','elrandygraterol@gmail.com'];
+   const recipients = ['programacion2ais@yopmail.com','juanalejandrodawaher@gmail.com'];
 
    const result = await sendEmail(recipients, subject, message);
    if (!result.success) {
