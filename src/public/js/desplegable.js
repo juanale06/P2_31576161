@@ -1,43 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.querySelector('.nav__mobile-toggle');
-    const mobileMenu = document.querySelector('.nav__list--mobile');
-    const body = document.body;
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
     
-    // Crear overlay dinámicamente
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-    document.body.appendChild(overlay);
-    
-    toggleButton.addEventListener('click', function() {
+    menuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.classList.toggle('no-scroll');
+        menuButton.classList.toggle('active');
         
-        // Cambiar icono de hamburguesa a X
-        const icon = this.querySelector('i');
+        // Cambiar entre icono de hamburguesa y X
         if (mobileMenu.classList.contains('active')) {
-            icon.classList.replace('fa-bars', 'fa-times');
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
         } else {
-            icon.classList.replace('fa-times', 'fa-bars');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
         }
     });
     
-    // Cerrar menú al hacer clic en overlay
-    overlay.addEventListener('click', function() {
-        mobileMenu.classList.remove('active');
-        this.classList.remove('active');
-        body.classList.remove('no-scroll');
-        toggleButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
-    });
-    
-    // Cerrar menú al hacer clic en un enlace (opcional)
-    const navLinks = document.querySelectorAll('.nav__link');
-    navLinks.forEach(link => {
+    // Cerrar el menú al hacer clic en un enlace
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
         link.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('no-scroll');
-            toggleButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            menuButton.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
         });
     });
 });

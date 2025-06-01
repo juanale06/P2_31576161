@@ -62,19 +62,19 @@ class ContactsController {
  `http://api.ipstack.com/${ip}?access_key=${process.env.KEYIPAPI}`
  );
    const ipstackData = await ipstackResponse.json();
-   const pais = ipstackData.country_name || 'datos-de-prueba-activados';
+   const pais = ipstackData.country_name || 'datos-de-prueba';
    await ContactosModel.addContact({ email, nombre, comentario, pais, ip });
    const subject = 'Alerta de contacto';
    const message = `Datos del contacto:
 -----------------------------
 • Nombre: ${nombre}
 • Comentario: ${comentario}
+• País: ${pais}
 • Email: ${email}
 • Dirección IP: ${ip}
-• País: ${pais}
 • Fecha y hora: ${new Date().toLocaleString()}
    -----------------------------`;
-   const recipients = ['programacion2ais@yopmail.com','tadelmojesuseduardot@gmail.com'];
+   const recipients = ['soapdelinger@gmail.com','elrandygraterol@gmail.com'];
 
    const result = await sendEmail(recipients, subject, message);
    if (!result.success) {
@@ -211,6 +211,76 @@ async index(req: Request, res: Response): Promise<void> {
     res.status(500).send('Error en el servidor');
   }
 }
+
+ /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async pedir(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('pedir');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+async info(req: Request, res: Response): Promise<void> {
+  try {
+    res.render('info');
+  } catch (error: any) {
+    console.error(error.message);
+    res.status(500).send('Error en el servidor');
+  }
+}
+
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async inicio_sesion(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('inicio_sesion');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async instrumentos(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('instrumentos');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
+  
+  /**
+   * Renderiza la página principal con las imágenes disponibles
+   * @param {Request} req - Objeto de solicitud HTTP
+   * @param {Response} res - Objeto de respuesta HTTP
+   */
+  async registro(req: Request, res: Response): Promise<void> {
+    try {
+      res.render('registro');
+    } catch (error: any) {
+      console.error(error.message);
+      res.status(500).send('Error en el servidor');
+    }
+  }
 
 
 

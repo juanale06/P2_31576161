@@ -4,7 +4,7 @@ formulario.addEventListener('submit',e=>{
 	e.preventDefault();
 	const token = grecaptcha.getResponse();
 	if (!token) {
-		alert("Por favor, completa el reCAPTCHA.");
+		alert("Por favor, ¡completa el RECAPTCHA para continuar!");
 		return;
 	}
 	const formData = new FormData(e.target);
@@ -20,9 +20,9 @@ formulario.addEventListener('submit',e=>{
     .then(res=>res.json())
     .then(res=>{
     	if(res.status==true){
-    		alert('¡Datos de Contacto creados Correctamente!');
+    		Swal.fire('¡Datos de Contacto creados Correctamente!');
     	}else{
-    		alert('¡Los Datos no se pudieron crear correctamente por alguna extraña razon hijo JAJAJAJAJ!');
+    		Swal.fire('¡Los Datos no se crearon, verifica que coño estas haciendo mal!');
     	}
     })
 

@@ -1,292 +1,133 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/estilos.css">
-      <title>Pagina web</title>
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDM2VCZHJ"></script>
-      <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSiC aT oME</title>
+    <link rel="shortcut icon" href="./img/music-album.png" type="png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QK9Q62ZTCZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-          gtag('config', 'G-7LDM2VCZHJ');
-      </script>
-  </head>
-  <body>
-      <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Event<span>Space</span></h1>
-                <p>Espacios que inspiran</p>
-            </div>
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#spaces">Espacios</a></li>
-                    <li><a href="/getPayment">Pagos</a></li>
-                    <li><a href="/admin/contacts">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      gtag('config', 'G-QK9Q62ZTCZ');
+  </script>
+</head>
+<body>
 
-    <main>
-        <!-- Sección Home -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2>Espacios exclusivos para tus eventos</h2>
-                    <p>Salones elegantes, coworking modernos y todo lo que necesitas para hacer de tu evento un éxito.</p>
-                    <div class="cta-buttons">
-                        <a href="#services" class="btn primary">Nuestros Servicios</a>
-                        <a href="#contact" class="btn secondary">Contáctanos</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="/images/sdqds-malecon-terrace-weddings-6022-hor-feat.jpg">
-                </div>
-            </div>
-        </section>
+    <nav class="nav">
+        <div class="nav__container container">
+            <div>
+               <a href="/"><img src="./img/music-album roja.png" alt="" class="nav__img"></a> 
+           </div>
 
-        <!-- Sección Servicios -->
-        <section id="services" class="services">
-            <div class="container">
-                <h2 class="section-title">Nuestros Servicios</h2>
-                <div class="services-grid">
-
-                    <div class="service-card">
-                        <i class="fas fa-glass-cheers"></i>
-                        <h3>Salones para Eventos</h3>
-                        <p>Amplios espacios diseñados para bodas, fiestas y eventos corporativos con todas las comodidades.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>Espacios Coworking</h3>
-                        <p>Áreas de trabajo colaborativo equipadas con tecnología de punta para reuniones y jornadas laborales.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Catering</h3>
-                        <p>Servicio de comida y bebida personalizado según el tipo de evento que desees realizar.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-photo-video"></i>
-                        <h3>Producción Audiovisual</h3>
-                        <p>Equipamiento profesional para presentaciones, conferencias y entretenimiento.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección Beneficios -->
-        <section class="benefits">
-            <div class="container">
-                <h2 class="section-title">Ventajas de Elegirnos</h2>
-                <div class="benefits-content">
-                    <div class="benefits-text">
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Espacios versátiles y completamente equipados</li>
-                            <li><i class="fas fa-check-circle"></i> Diseño moderno y funcional</li>
-                            <li><i class="fas fa-check-circle"></i> Ubicaciones estratégicas en la ciudad</li>
-                            <li><i class="fas fa-check-circle"></i> Personal profesional y capacitado</li>
-                            <li><i class="fas fa-check-circle"></i> Flexibilidad en horarios y servicios adicionales</li>
-                            <li><i class="fas fa-check-circle"></i> Precios competitivos y paquetes personalizados</li>
-                        </ul>
-                    </div>
-                    <div class="benefits-image">
-                        <img src="/images/eventos-corporativos.png">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- Sección Espacios -->
-<section id="spaces" class="spaces">
-    <div class="container">
-        <h2 class="section-title">Nuestros Espacios</h2>
-        <ul class="spaces-list">
-            <li class="tab-content active" id="salones">
-                <div class="space-details">
-                    <div class="space-info">
-                        <h3>Salón Diamante</h3>
-                        <p>Capacidad para 150 personas, ideal para bodas y eventos formales. Cuenta con sistema de iluminación profesional, escenario y área de catering.</p>
-                        <ul>
-                            <li><i class="fas fa-ruler-combined"></i> 150 m²</li>
-                            <li><i class="fas fa-user-friends"></i> Hasta 150 personas</li>
-                            <li><i class="fas fa-wifi"></i> WiFi de alta velocidad</li>
-                        </ul>
-                        <a href="/vistas" class="btn primary">Solicitar Información</a>
-                    </div>
-                    <div class="space-image">
-                        <img src="/images/salon diamante.jpeg">
-                    </div>
-                </div>
-            </li>
-            <li class="tab-content active" id="coworking">
-                <div class="space-details">
-                    <div class="space-info">
-                        <h3>Coworking Lounge</h3>
-                        <p>Espacio ideal para trabajo en equipo, con escritorios compartidos y privacidad. Ofrecemos acceso a herramientas tecnológicas y un ambiente colaborativo.</p>
-                        <ul>
-                            <li><i class="fas fa-ruler-combined"></i> 100 m²</li>
-                            <li><i class="fas fa-user-friends"></i> Hasta 30 personas</li>
-                            <li><i class="fas fa-wifi"></i> WiFi de alta velocidad</li>
-                        </ul>
-                        <a href="/vistas" class="btn primary">Solicitar Información</a>
-                    </div>
-                    <div class="space-image">
-                        <img src="/images/salon.jpeg">
-                    </div>
-                </div>
-            </li>
-            <li class="tab-content active" id="exteriores">
-                <div class="space-details">
-                    <div class="space-info">
-                        <h3>Área Externa Jardín</h3>
-                        <p>Zona al aire libre perfecta para eventos informales, con jardín y zona de descanso. Ideal para celebraciones al aire libre y reuniones relajadas.</p>
-                        <ul>
-                            <li><i class="fas fa-ruler-combined"></i> 300 m²</li>
-                            <li><i class="fas fa-user-friends"></i> Hasta 50 personas</li>
-                            <li><i class="fas fa-wifi"></i> WiFi disponible</li>
-                        </ul>
-                        <a href="/vistas" class="btn primary">Solicitar Información</a>
-                    </div>
-                    <div class="space-image">
-                        <img src="/images/jardin.jpg">
-                    </div>
-                </div>
-            </li>
-            <li class="tab-content active" id="salones2">
-                <div class="space-details">
-                    <div class="space-info">
-                        <h3>Salón Esmeralda</h3>
-                        <p>Salón elegante con capacidad para 100 personas, ideal para eventos de tamaño mediano. Cuenta con iluminación LED y sistema de sonido de alta calidad.</p>
-                        <ul>
-                            <li><i class="fas fa-ruler-combined"></i> 180 m²</li>
-                            <li><i class="fas fa-user-friends"></i> Hasta 100 personas</li>
-                            <li><i class="fas fa-wifi"></i> WiFi de alta velocidad</li>
-                        </ul>
-                        <a href="/vistas" class="btn primary">Solicitar Información</a>
-                    </div>
-                    <div class="space-image">
-                        <img src="/images/salon esmeralda.jpg">
-                    </div>
-                </div>
-            </li>
+           <ul class="nav__ul">
+            <li class="nav__li"><a href="/registro" title="REGiSTRO" class="nav__a active">ReGISTRO</a></li>
+            <li class="nav__li"><a href="/inicio_sesion" title="REGiSTRO" class="nav__a">INICiO De SESIoN</a></li>
+            <li class="nav__li"><a href="/instrumentos" class="nav__a">INSTRuMENTOS DiSPONIBLES</a></li>
+            <li class="nav__li"><a href="/pedir" class="nav__a active">PEDIR Ya</a></li>
+            <li class="nav__li"><a href="/info" title="INFoRMACION" class="nav__a">INFoRMACION</a></li>
+            <li class="nav__li"><a href="/getPayment"  class="nav__a">Pagos</a></li>
+            <li class="nav__li"><a href="/admin/contacts"  class="nav__a">Contactos</a></li>
         </ul>
     </div>
-</section>
+</nav>
 
-<!-- Sección Galería -->
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2 class="section-title">Galería</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="/images/como-organizar-evento-corporativo.jpg">
-                <div class="gallery-overlay">
-                    <p>Evento Corporativo</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/coworking.jpg">
-                <div class="gallery-overlay">
-                    <p>Área Coworking</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/boda.jpg">
-                <div class="gallery-overlay">
-                    <p>Celebración de Boda</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/conferencia.jpg">
-                <div class="gallery-overlay">
-                    <p>Conferencia</p>
-                </div>
-            </div>
-        </div>
+<header class="header">
+    <div class="header__title">
+        <h1 class="header__h1">TU MOMENTO DE TOCAR MUSICA A LLEGADO...</h1>
+        <span class="header__span">¡Hola y bienvenido a MUSiC aT HoME! Nos alegra que estés aquí. Somos tu solución integral para el alquiler y entrega de instrumentos musicales a domicilio. Ya sea que seas un principiante entusiasta, un músico experimentado o simplemente quieras explorar el mundo de la música, estamos aquí para ayudarte a encontrar el instrumento perfecto.</span>
     </div>
-</section>
+</header>
 
-<!-- Sección Contacto -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title">Contáctanos</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Información de Contacto</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Av. Terminal, Ciudad San juan de los morros</p>
-                <p><i class="fas fa-phone"></i> +584128562832</p>
-                <p><i class="fas fa-envelope"></i> info@eventspace.com</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form id="formulario">
-                    <div class="form-group">
-                        <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input required type="text" name="comentario" id="comentario" placeholder="comentario">
-                    </div>
+<main class="main">
 
-                    <!-- reCAPTCHA -->
-                    <div class="g-recaptcha" data-sitekey="<%=sitioKey%>"></div>
-
-
-                    <button type="submit" class="btn primary">Enviar Mensaje</button>
-                </form>
-            </div>
+    <section class="niteball">
+        <div class="main__container niteball__container container">
+            <picture class="main__pic main__box niteball__box niteball__pic"></picture>
+            <article class="main__txt main__box niteball__box niteball__txt">
+                <h2 class="main__h2 guitarra__h2">GUITARRA</h2>
+                <h3 class="main__h3 niteball__h3">LA REINVENCIÓN DE UN CLÁSICO</h3>
+                <p class="main__p niteball__p">Descubre el sonido que siempre has deseado con esta impresionante guitarra acústica! Con un diseño elegante y una construcción de alta calidad, esta guitarra ofrece un tono cálido y resonante que hará que cada acorde cobre vida. Ideal tanto para principiantes como para músicos experimentados, cuenta con cuerdas de acero que proporcionan una excelente proyección y durabilidad.</p>
+                <ul class="main__ul niteball__ul">
+                    <li class="main__li niteball__li">PRECIO 1189$.</li>
+                    <li class="main__li niteball__li">HASTA LA PUERTA DE TU CASA.</li>
+                </ul>
+            </article>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="banner">
+        <div class="banner__container container">
+            <img src="./img/instrumentos.png" alt="" class="banner__img">
+            <p class="banner__p">La música es un elemento esencial en la vida humana, ya que permite la expresión emocional, refleja la cultura y la identidad de las comunidades, y contribuye al desarrollo cognitivo al mejorar habilidades como la memoria y la atención. Además, actúa como una poderosa herramienta para la relajación y el bienestar, ayudando a reducir el estrés y la ansiedad</p>
+        </div>
+    </section>
+
+    <section class="forum">   
+        <div class="main__container forum__container container">
+            <article class="main__txt main__box forum__box forum__txt">
+                <h2 class="main__h2 piano__h2">PIANO </h2>
+                <h3 class="main__h3 piano__h3">PREPÁRATE PARA REVOLUCIONARLO TODO</h3>
+                <p class="main__p forum__p">Transforma tu hogar en un oasis musical con este magnífico piano de cola! Con su diseño elegante y sofisticado, este piano no solo es una obra de arte que embellecerá cualquier espacio, sino que también ofrece un sonido rico y resonante que deleitará a todos. Ideal para pianistas de todos los niveles, sus teclas suaves y sensibles permiten una interpretación precisa y emotiva..</p>
+                <ul class="main__ul forum__ul">
+                    <li class="main__li niteball__li">PRECIO 12399$.</li>
+                    <li class="main__li niteball__li">HASTA LA PUERTA DE TU CASA.</li>
+                </ul>    
+            </article>
+            <picture class="main__pic main__box forum__box forum__pic"></picture>
+        </div>
+    </section>
+
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h3>EventSpace</h3>
-                <p>Líderes en alquiler de espacios para eventos y coworking. Creamos ambientes perfectos para tus momentos especiales.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#spaces">Espacios</a></li>
-                    <li><a href="#gallery">Galería</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </div>
+    <div class="footer__container container">
+        <img src="./img/music-album 128.png" alt="" class="footer__img">
+        <div class="formC" >
+            <form id="formulario" class="nForm" >
+                <h2 class="formC__h2">Contáctanos</h2>
+                <input type="text" class="input"  placeholder="Ingresa tu Nombre" name="nombre" id="nombre" required>
+                <input type="text" class="input"  placeholder="Ingresa tu Correo" name="email" id="email" required >
+                <input type="text" class="input"  placeholder="Ingresa tu Mensaje" name='comentario' id="comentario" required>
+                <!-- reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="<%=sitioKey%>"></div>
+                <button type="submit" class="buttonF">Enviar</button>
+            </form>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 EventSpace. <br>
-            Hecho con amor 💖</p>
-        </div>
+        <ul class="footer__ul">
+            <li class="footer__li">
+                <a href="https://www.instagram.com" target="_blank" class="footer__a">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </li>
+            <li class="footer__li">
+                <a href="https://www.tiktok.com" target="_blank" class="footer__a">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+            </li>
+            <li class="footer__li">
+                <a href="https://www.facebook.com" target="_blank" class="footer__a">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </li>
+            <li class="footer__li">
+                <a href="mailto:info@musichome.com" class="footer__a">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </li>
+        </ul>
+        <span class="footer__span">2025 MUSiC aT HoME. TODOS LOS DERECHOS RESERVADOS.</span>
     </div>
 </footer>
-<script src="/js/fetch.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src='/js/fetch.js'></script>
 </body>
-</html> 
-
-
-
+</html>

@@ -13,9 +13,9 @@ formularioPayment.addEventListener('submit',e=>{
 	.then(res=>res.json())
 	.then(res=>{
 		if(res.status){
-        alert(`¡Pago realizado! transaction_id: ${res.transactionId}`);
+        alert(`¡Pago realizado! id: ${res.transactionId}`);
 		}else{
-		alert('¡Por algun extraño motivo, no se pudo realizar el pago!');
+		alert('No se pudo realizar el pago!');
 		}
 	})
 
